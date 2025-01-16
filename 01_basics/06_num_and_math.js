@@ -31,4 +31,4 @@ console.log((Math.random()*10)+1);  //but random value can also be 0.0something 
 const min=10
 const max=20
 
-console.log(Math.floor(Math.random()*(max-min+1)) + min)   //math.sloor to get the shortest integer
+console.log(Math.floor(Math.random()*(max-min+1)) + min)   //math.floor to get the shortest integer
