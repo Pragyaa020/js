@@ -24,12 +24,12 @@ const tinderUser=new Object();  //singleton object
  const obj4={5:"a",6:"b"}
 
  //const obj3={obj1,obj2};  //gives object in object
-const obj3=Object.assign(obj1,obj2,obj4)  //{} guarantees that all values will get combined and we get desired result,,,{} is the target in which values from all the sources will be stored,,, obj1,obj2,obj4 are sources
+const obj3=Object.assign({},obj1,obj2,obj4)  //{} guarantees that all values will get combined and we get desired result,,,{} is the target in which values from all the sources will be stored,,, obj1,obj2,obj4 are sources
 
  console.log(obj3);
 
 
- const obj5=Object.assign(obj1,obj2,obj4)  //{} guarantees that all values will get combined and we get desired result,,,{} is the target in which values from all the sources will be stored,,, obj1,obj2,obj4 are sources
+ const obj5=Object.assign(obj1,obj2,obj4) 
 //if instead of using {} as the target ,we choose obj1 as the target we will modify obj1 to look as the final result
  console.log(obj5);
  console.log(obj1);
@@ -66,6 +66,25 @@ console.log(Object.entries(tinderUser));  //returns all keyvalue pairs as array.
 
 console.log((tinderUser.hasOwnProperty('isLoggedIn')));
 
+//destructuring
+ const course={
+    coursename:"js in hindi",
+    price:"999",
+    courseInstructor:"hitesh"
+ }
+
+//  const {courseInstructor}=course  //we have extracted courseinstructor value from the course object
+//  console.log(courseInstructor);
+
+//to give different name to the value extracted
+const{courseInstructor:instructor}=course;
+console.log(instructor);
+
+// {
+//     "name":"pragya",
+//    "coursename":"js in hindi",   //json
+//     "price":"free"
+// }
 
  
  
